@@ -76,7 +76,6 @@
       border-radius: 2px;
       max-width: 99%;
       height: 40vh;
-      color: white;
     }
   </style>
 
@@ -87,6 +86,7 @@
       var myFrame = $("#myframe").contents().find('body');
       var textareaValue = $("textarea").val();
       myFrame.html(textareaValue);
+      myFrame.css('color', 'white');
     }
   </script>
 
