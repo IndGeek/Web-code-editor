@@ -123,6 +123,12 @@
       position: absolute;
       right: 4%;
     }
+
+    .download-code{
+      padding:5px 0 0 5px;
+      cursor: pointer;
+    }
+
   </style>
 
   <!-- JavaScript -->
@@ -133,6 +139,18 @@
       var textareaValue = $("textarea").val();
       myFrame.html(textareaValue);
       myFrame.css('color', 'white');
+    }
+  </script>
+
+  <!-- Download the snippet -->
+
+  <script>
+    const toWrite = document.getElementById("code-here").value;
+    document.getElementById("down").onclick = function(){
+      var l = document.createElement("a");
+      l.href = "data:text/plain;charset=UTF-8," + document.getElementById("code-here").value;
+      l.setAttribute("download", 'codeSnippet');
+      l.click();
     }
   </script>
 
@@ -156,6 +174,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://indgeek.com/forum/" target="_blank">Forum</a>
+          </li>
+          <li class="nav-item download-code" id="down" title="Download this code">
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 19h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Zm8-5.825 3.243-3.242 1.414 1.414L12 17.004l-5.657-5.657 1.414-1.414L11 13.175V2h2v11.175Z"
+                fill="white" />
+            </svg>
           </li>
           <li class="nav-item justify-content-end">
             <a class="nav-link btn-web" href="https://turbohosty.com/wordpress-service" target="_blank">Get your
