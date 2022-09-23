@@ -146,10 +146,7 @@
   <script>
     function copyCode(){
       console.log('okay func');
-      var toWrite = document.getElementById("code-here").value;
-      console.log(toWrite);
-      toWrite.focus();
-      toWrite.select();
+      var toWrite = document.getElementById("code-here").select();
       document.execCommand('copy');
     };
   </script>
